@@ -17,15 +17,17 @@ namespace GOL1
 
             thegameboard.RandomCellsAlive(1000);
 
-
             //Loppen där spelet körs
             //Thread.Sleep får spelet att pausas i 150 millisekunder
             while (true)         
             {
+                
                     Console.Clear();
-                    thegameboard.Analyze();
-                    thegameboard.PrintBoard();
-                    thegameboard.Neighbours();
+                thegameboard.Analyze();
+                Console.WriteLine("------------------======== The Game Of Life ========------------------\n______________________________________________________________________");
+                thegameboard.PrintBoard();
+                Console.WriteLine("______________________________________________________________________");
+                thegameboard.Neighbours();
                     thegameboard.ChangeBoard();
 
                 Thread.Sleep(150); 

@@ -70,14 +70,38 @@ namespace GOL1
                 for (int x = 0; x < X; x++)
                 {
                     Board[y, x].Neighbour = 0;
-                    if (y != 0 && Board[y - 1, x].Alive == true) { Board[y, x].Neighbour += 1; }
-                    if (y != 0 && x != X - 1 && Board[y - 1, x + 1].Alive == true) { Board[y, x].Neighbour += 1; }
-                    if (y != 0 && x != 0 && Board[y - 1, x - 1].Alive == true) { Board[y, x].Neighbour += 1; }
-                    if (y != Y - 1 && Board[y + 1, x].Alive == true) { Board[y, x].Neighbour += 1; }
-                    if (y != Y - 1 && x != X - 1 && Board[y + 1, x + 1].Alive == true) { Board[y, x].Neighbour += 1; }
-                    if (y != Y - 1 && x != 0 && Board[y + 1, x - 1].Alive == true) { Board[y, x].Neighbour += 1; }
-                    if (x != X - 1 && Board[y, x + 1].Alive == true) { Board[y, x].Neighbour += 1; }
-                    if (x != 0 && Board[y, x - 1].Alive == true) { Board[y, x].Neighbour += 1; }
+                    if (y != 0 && Board[y - 1, x].Alive == true)
+                    {
+                        Board[y, x].Neighbour += 1;
+                    }
+                    if (y != 0 && x != X - 1 && Board[y - 1, x + 1].Alive == true)
+                    {
+                        Board[y, x].Neighbour += 1;
+                    }
+                    if (y != 0 && x != 0 && Board[y - 1, x - 1].Alive == true)
+                    {
+                        Board[y, x].Neighbour += 1;
+                    }
+                    if (y != Y - 1 && Board[y + 1, x].Alive == true)
+                    {
+                        Board[y, x].Neighbour += 1;
+                    }
+                    if (y != Y - 1 && x != X - 1 && Board[y + 1, x + 1].Alive == true)
+                    {
+                        Board[y, x].Neighbour += 1;
+                    }
+                    if (y != Y - 1 && x != 0 && Board[y + 1, x - 1].Alive == true)
+                    {
+                        Board[y, x].Neighbour += 1;
+                    }
+                    if (x != X - 1 && Board[y, x + 1].Alive == true)
+                    {
+                        Board[y, x].Neighbour += 1;
+                    }
+                    if (x != 0 && Board[y, x - 1].Alive == true)
+                    {
+                        Board[y, x].Neighbour += 1;
+                    }
                 }
             }
 
@@ -88,10 +112,22 @@ namespace GOL1
             {
                 for (int x = 0; x < X; x++)
                 {
-                    if (Board[y, x].Alive == true && Board[y, x].Neighbour == 3) { Board[y, x].Color = +1; }
-                    else if (Board[y, x].Alive == true && Board[y, x].Neighbour == 2) { Board[y, x].Color += 1; }
-                    else if (Board[y, x].Alive == true && Board[y, x].Neighbour < 2 || Board[y, x].Neighbour > 3) { Board[y, x].Alive = false; Board[y, x].Color = 1; }
-                    else if (Board[y, x].Alive == false && Board[y, x].Neighbour == 3) { Board[y, x].Alive = true; }
+                    if (Board[y, x].Alive == true && Board[y, x].Neighbour == 3)
+                    {
+                        Board[y, x].Color = +1;
+                    }
+                    else if (Board[y, x].Alive == true && Board[y, x].Neighbour == 2)
+                    {
+                        Board[y, x].Color += 1;
+                    }
+                    else if (Board[y, x].Alive == true && Board[y, x].Neighbour < 2 || Board[y, x].Neighbour > 3)
+                    {
+                        Board[y, x].Alive = false; Board[y, x].Color = 1;
+                    }
+                    else if (Board[y, x].Alive == false && Board[y, x].Neighbour == 3)
+                    {
+                        Board[y, x].Alive = true;
+                    }
                 }
             }
         }
