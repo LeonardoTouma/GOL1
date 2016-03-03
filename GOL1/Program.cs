@@ -19,12 +19,13 @@ namespace GOL1
 
             //Loppen där spelet körs
             //Thread.Sleep får spelet att pausas i 150 millisekunder
+            //Changed
             while (true)         
             {
                 
                     Console.Clear();
                 thegameboard.Analyze();
-                Console.WriteLine("------------------======== The Game Of Life ========------------------\n______________________________________________________________________");
+                Console.WriteLine("-----------------========= The Game Of Life =========-----------------\n______________________________________________________________________");
                 thegameboard.PrintBoard();
                 Console.WriteLine("______________________________________________________________________");
                 thegameboard.Neighbours();
